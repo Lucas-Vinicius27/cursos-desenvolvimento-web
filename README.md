@@ -6,6 +6,8 @@ Conjunto de cursos referente ao desenvolvimento WEB, aqui irá ficar os exercíc
 * CSS3
 * JavaScript
 * PHP
+
+### Sobre o repositório
 * Não terá nenhum framework envolvido nos exercícios, apenas os códigos puros.
 * Exercícios que não envolvem PHP ficarão hospedados no GitHub Pages para análise e navegação entre exercícios.
 * Para executar os exercícios de PHP, será necessário você preparar o ambiente e clonar este repositório.
