@@ -1,5 +1,5 @@
 # Cursos de Desenvolvimento WEB
-Conjunto de cursos referente ao desenvolvimento WEB,
+Conjunto de cursos referente ao desenvolvimento WEB,..
 aqui irá ficar os exercícios feitos em aula e desafios propostos,
 eles ficarão separados por sites educacionais ou cursos disponíveis em playlist de canais do youtube.
 
