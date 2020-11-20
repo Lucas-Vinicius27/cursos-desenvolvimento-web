@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 9</title>
+    <link rel="sortcut icon" href="../images/favicon.png" type="image/png">
+    <style>
+        body {
+            background-color: black;
+            color: aquamarine;
+            text-align: center;
+            font: normal 15pt Arial;
+        }
+
+        a:link,
+        a:visited,
+        a:active {
+            text-decoration: none;
+            color: aquamarine;
+        }
+
+        a:hover {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando com DOM</h1>
+    <p>Aqui está o resultado</p>
+    <p>Apredendo a usar <strong>DOM</strong> em JS</p>
+    <div id="msg">Clique aqui</div>
+    <div name="oi">Olá</div>
+    <div class="ola">Oi</div>
+    <div id="mun">Mundo</div>
+    <div><a href="../index.html">Aulas JavaScript</a></div>
+    <script>
+        /*
+        Operadores aritméticos +, -, *, /, %, **(potência)
+        Ordem a ser executada (), **, *, /, %, +, -
+        incremento e decremento ++, --
+
+        operadores relacionais <, >, <=, >=, ==, !=
+        identico === desigual restrito !==
+        lógico ! not, && e, || ou, esta é a ordem de execução
+        operador ternario expressão ? var1 : var2
+        */
+        var p = document.getElementsByTagName('p')[0]
+        var p1 = window.document.getElementsByTagName('p')[1]
+        p.style.color = 'blue'
+        p1.style.color = 'red'
+        document.write(p1.innerText)
+        document.write(p1.innerHTML)
+        var d = document.getElementById('msg')
+        d.style.background = 'red'
+        var d1 = document.getElementsByName('oi')[0]
+        d1.style.background = 'green'
+        var d2 = document.getElementsByClassName('ola')[0]
+        d2.style.background = 'purple'
+        var d3 = document.querySelector("div#mun")
+        d3.style.background = "yellow"
+    </script>
+</body>
+
+</html>
