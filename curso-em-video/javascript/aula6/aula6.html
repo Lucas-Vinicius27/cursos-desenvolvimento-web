@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6</title>
+    <link rel="sortcut icon" href="../images/favicon.png" type="image/png">
+    <style>
+        body {
+            background-color: black;
+            font: normal 15pt Arial;
+            text-align: center;
+        }
+
+        h1,
+        p {
+            color: aquamarine;
+        }
+
+        a:link,
+        a:visited,
+        a:active {
+            text-decoration: none;
+            color: aquamarine;
+        }
+
+        a:hover {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Olá, mundo</h1>
+    <p>JS!</p>
+    <a href="../index.html">Aulas JavaScript</a>
+    <script>
+
+        // var nome = window.prompt('Qual o seu nome?')
+        // window.alert('Olá ' + nome + '!')
+
+        var n1 = Number(window.prompt('Digite um número: '))//Number.parseInt ou parseFloat
+        var n2 = Number(window.prompt('Digite outro número: '))//String(var) var.toString()
+
+        window.alert('Primeiro número ' + n1 + ' Segundo número ' + n2)
+
+        var s = n1 + n2 // ver tipo da var typeof() pode ser usado junto com alert
+
+        // window.alert('A soma dos valores é ' + s)
+        window.alert(`A soma dos valores é ${s}`)
+
+        // var.length quantos caracteres te uma string
+        // var.toUpperCase() coloca todas as letras em maiúscula
+        // var.toLowerCase() coloca todas as letras em minúscula
+
+        var nome = prompt('Qual o seu nome?')
+        document.write(`<p>Olá ${nome}! Seu nome tem ${nome.length} letras<p>`)
+
+        // var.toFixed(2) duas casas depois do ponto, para colocar virgula add .replace('.', ',')
+        // var.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'}) mostra número em real
+
+    </script>
+</body>
+
+</html>
