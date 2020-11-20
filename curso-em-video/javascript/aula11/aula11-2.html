@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="1"> -->
+    <title>Aula 11 - 2</title>
+    <link rel="sortcut icon" href="../images/favicon.png" type="image/png">
+    <style>
+        body {
+            background-color: black;
+            color: aquamarine;
+            text-align: center;
+            font: normal 20pt Arial;
+        }
+
+        a:link,
+        a:visited,
+        a:active {
+            text-decoration: none;
+            color: aquamarine;
+        }
+
+        a:hover {
+            color: darkblue;
+        }
+
+        input {
+            font: normal 20pt Arial;
+            margin-top: 20px;
+        }
+
+        div {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Aeroporto</h1>
+    <h2>Sistema de Desembargue</h2>
+    Qual seu país de origiem: <input type="text" name="pais" id="pais"><br>
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <div><a href="../index.html">Aulas JavaScript</a></div>
+    <div id="hora"></div>
+    <script>
+        function verificar() {
+            var pais = document.getElementById('pais').value
+            var res = document.querySelector('div#res')
+
+            if (pais == 'BR' || pais == 'br' || pais == 'Brazil') {
+                pais = 'Brasil'
+                res.innerHTML = `<p>Seu país de origem é o <strong>${pais}</strong>.</p>`
+            } else {
+                res.innerHTML = `<p>Seu país de origem é o <strong>${pais}</strong>.</p>`
+            }
+
+            if (pais == 'Brasil') {
+                res.innerHTML += '<p>Bem-vindo de volta ao Brasil. Você é <strong>Brasileiro(a)!</strong></p>'
+            }
+            else {
+                res.innerHTML += '<p>Bem-vindo ao Brasil. Você é <strong>Estrangeiro(a)!</strong></p>'
+            }
+
+            res.innerHTML += '<p>Mantenha suas malas sempre perto de você.</p>'
+        }
+        var hr = document.getElementById('hora')
+
+        setInterval(function () {
+            var date = new Date();
+            hr.innerHTML = '<strong>' + date.toLocaleTimeString() + '</strong>';
+        }, 1000);
+    </script>
+</body>
+
+</html>
