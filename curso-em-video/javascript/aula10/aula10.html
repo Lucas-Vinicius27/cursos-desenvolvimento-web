@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10</title>
+    <link rel="sortcut icon" href="../images/favicon.png" type="image/png">
+    <style>
+        body {
+            background-color: black;
+            color: aquamarine;
+            text-align: center;
+            font: normal 20pt Arial;
+        }
+
+        a:link,
+        a:visited,
+        a:active {
+            text-decoration: none;
+            color: aquamarine;
+        }
+
+        a:hover {
+            color: darkblue;
+        }
+
+        div#area {
+            background-color: aqua;
+            color: black;
+            line-height: 200px;
+            width: 200px;
+            height: 200px;
+        }
+
+        div#hora {
+            line-height: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Eventos DOM</h1>
+    <!-- <div id="area" onclick="clicar()" onmousemove="entrar()" onmouseout="sair()"> -->
+    <div id="area">
+        Interaja.....
+    </div>
+    <div><a href="../index.html">Aulas JavaScript</a></div>
+    <div id="hora"></div>
+    <script>
+        var a = document.getElementById('area')
+        a.addEventListener("click", clicar)
+        a.addEventListener("mousemove", entrar)
+        a.addEventListener("mouseout", sair)
+
+        function clicar() {
+            // var a = document.getElementById('area')
+            a.innerHTML = '<strong>Clicou!</strong>'
+            a.style.background = 'red'
+        }
+
+        function entrar() {
+            // var a = window.document.getElementById('area')
+            a.innerHTML = '<strong>Entrou!</strong>'
+        }
+
+        function sair() {
+            // var a = document.getElementById('area')
+            a.innerHTML = '<strong>Saiu!</strong>'
+            a.style.background = 'aqua'
+        }
+
+        // setInterval(function () {
+        //     a.innerHTML = 'Interaja.....'
+        // }, 5000)
+
+        var hr = document.getElementById('hora')
+
+        setInterval(function () {
+            var date = new Date();
+            hr.innerHTML = '<strong>' + date.toLocaleTimeString() + '</strong>';
+        }, 1000);
+    </script>
+</body>
+
+</html>

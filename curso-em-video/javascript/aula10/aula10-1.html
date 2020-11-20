@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 - 1</title>
+    <link rel="sortcut icon" href="../images/favicon.png" type="image/png">
+    <style>
+        body {
+            background-color: black;
+            color: aquamarine;
+            text-align: center;
+            font: normal 20pt Arial;
+        }
+
+        input {
+            font: normal 20pt Arial;
+        }
+
+        a:link,
+        a:visited,
+        a:active {
+            text-decoration: none;
+            color: aquamarine;
+        }
+
+        a:hover {
+            color: darkblue;
+        }
+
+        div#hora,
+        div#resul {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Eventos DOM</h1>
+    <h2>Somando Valores</h2>
+    <input type="number" name="n1" id="n1">
+    +
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="resul">Resultado</div>
+    <div><a href="../index.html">Aulas JavaScript</a></div>
+    <div id="hora"></div>
+    <script>
+        function somar() {
+            var resul = document.getElementById('resul')
+            var n1 = Number(document.getElementById('n1').value)
+            var n2 = Number(document.querySelector('input#n2').value)
+            var s = n1 + n2
+            resul.innerHTML = `<strong>A soma entre ${n1} e ${n2} é igual a ${s}</strong>`
+        }
+
+        var hr = document.getElementById('hora')
+
+        setInterval(function () {
+            var date = new Date();
+            hr.innerHTML = '<strong>' + date.toLocaleTimeString() + '</strong>';
+        }, 1000);
+    </script>
+</body>
+
+</html>
