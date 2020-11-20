@@ -34,6 +34,10 @@ input{
     font: normal 11pt Arial;
 }
 
+button{
+    font: normal 11pt Arial;
+}
+
 footer{
     color: white;
     font-style: italic;

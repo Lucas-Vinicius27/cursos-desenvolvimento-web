@@ -42,6 +42,11 @@ function media(a) {
     return somar(a) / a.length
 }
 
+function limpar() {
+    s.innerHTML = ''
+    resultado.innerHTML = ''
+}
+
 function adicionar() {
     var n = Number(document.querySelector('input#n').value)
     if (n == '' || n < 1 || n > 100) {
