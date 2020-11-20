@@ -1,0 +1,36 @@
+body {
+    /* background: black; */
+    background: rgb(70, 142, 236);
+    text-align: center;
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+}
+
+section{
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: darkblue;
+}
+
+footer{
+    color: white;
+    font-style: italic;
+}
