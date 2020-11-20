@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <link rel="stylesheet" href="exercicio1.css">
+    <link rel="sortcut icon" href="../../images/favicon.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Ano de Nascimento:
+                <input type="number" name="ano" id="ano" min="0">
+            </p>
+            <p>
+                Sexo:
+                <input type="radio" name="sx" id="masc" value="masculino" checked>
+                <label for="masc">Masculino</label>
+                <input type="radio" name="sx" id="fem" value="feminino">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+        <div><a href="../../index.html">Aulas JavaScript</a></div>
+        <div id="horaAtual"></div>
+    </section>
+    <footer>
+        <p>&copy; Zero</p>
+    </footer>
+    <script src="exercicio1.js"></script>
+</body>
+
+</html>
