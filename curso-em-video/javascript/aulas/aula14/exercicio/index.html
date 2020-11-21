@@ -9,16 +9,19 @@
     <link rel="shortcut icon" href="../../../images/favicon.ico" type="image/x-icon">
 </head>
 
-<body onload="carregar()">
+<body>
     <header>
-        <h1>Hora do Dia</h1>
+        <h1>Vamos Contar</h1>
     </header>
     <section>
-        <div id="msg"></div>
-        <div id="foto">
-            <img id="img" src="" alt="Foto do dia">
+        <div>
+            <p>Início: <input type="number" name="ini" id="ini"></p>
+            <p>Fim: <input type="number" name="fim" id="fim"></p>
+            <p>Passo: <input type="number" name="inc" id="inc"></p>
+            <p><input type="button" value="Contar" onclick="contar()"></p>
         </div>
-        <div><a href="../../aulas.html">Aulas</a></div>
+        <div id="res">Preparando a contagem.....</div>
+        <div><a href="../../">Aulas</a></div>
         <div id="horaAtual"></div>
     </section>
     <footer>

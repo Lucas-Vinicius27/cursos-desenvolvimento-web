@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 10 - 1</title>
-    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <title>Aula 11</title>
+    <link rel="shortcut icon" href="../../../images/favicon.ico" type="image/x-icon">
     <style>
         body {
             background-color: black;
@@ -16,6 +16,7 @@
 
         input {
             font: normal 20pt Arial;
+            margin-top: 20px;
         }
 
         a:link,
@@ -29,32 +30,31 @@
             color: darkblue;
         }
 
-        div#hora,
-        div#resul {
+        div {
             margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
-    <h1>Eventos DOM</h1>
-    <h2>Somando Valores</h2>
-    <input type="number" name="n1" id="n1">
-    +
-    <input type="number" name="n2" id="n2">
-    <input type="button" value="Somar" onclick="somar()">
-    <div id="resul">Resultado</div>
-    <div><a href="../aulas.html">Aulas</a></div>
+    <h1>Detran</h1>
+    <h2>Sistema de Multas</h2>
+    Velocidade do carro: <input type="number" name="vel" id="vel"> Km/h<br>
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+    <div><a href="../../">Aulas</a></div>
     <div id="hora"></div>
     <script>
-        function somar() {
-            var resul = document.getElementById('resul')
-            var n1 = Number(document.getElementById('n1').value)
-            var n2 = Number(document.querySelector('input#n2').value)
-            var s = n1 + n2
-            resul.innerHTML = `<strong>A soma entre ${n1} e ${n2} é igual a ${s}</strong>`
-        }
+        function calcular() {
+            var vel = Number(document.getElementById('vel').value)
+            var res = document.querySelector('div#res')
 
+            res.innerHTML = `<p>A sua velocidade é <strong>${vel}km/h</strong>.</p>`
+            if (vel > 60) {
+                res.innerHTML += '<p>Você ultrapassou o limite de velocidade. <strong>MULTADO!</strong></p>'
+            }
+            res.innerHTML += '<p>Dirija sempre com sinto de seguranção.</p>'
+        }
         var hr = document.getElementById('hora')
 
         setInterval(function () {
