@@ -1,4 +1,4 @@
-var hr = document.getElementById('horaAtual')
+var hr = document.getElementById('horaAtual');
 
 setInterval(function () {
     var date = new Date();
