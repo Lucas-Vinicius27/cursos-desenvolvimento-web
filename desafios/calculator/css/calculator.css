@@ -1,0 +1,17 @@
+.btn {
+    height: auto;
+    width: 70px;
+    font-size: larger;
+    border: none;
+    background-color: white;
+}
+
+.btn:hover {
+    background-color: rgb(70, 142, 236);
+}
+
+.btn:focus {
+    outline: thin dotted;
+    outline: 0px auto;
+    outline-offset: 0px;
+}

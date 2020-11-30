@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/calculator.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
@@ -14,11 +15,52 @@
         <h1>Calculadora com JavaScript</h1>
     </header>
     <section>
-        <div>
-            <div id="view"></div>
-            <div id="res"></div>
-            <input type="button" value="1">
-            <input type="button" value="2">
+        <div class="block">
+            <div>
+                conta
+            </div>
+            <div>
+                pré-resultado
+            </div>
+            <div>
+                <button type="button" class="btn" id="n7" onclick="">7</button>
+                <button type="button" class="btn" id="n8" onclick="">8</button>
+                <button type="button" class="btn" id="n9" onclick="">9</button>
+            </div>
+            <div>
+                <button type="button" class="btn" id="n4" onclick="">4</button>
+                <button type="button" class="btn" id="n5" onclick="">5</button>
+                <button type="button" class="btn" id="n6" onclick="">6</button>
+            </div>
+            <div>
+                <button type="button" class="btn" id="n1" onclick="">1</button>
+                <button type="button" class="btn" id="n2" onclick="">2</button>
+                <button type="button" class="btn" id="n3" onclick="">3</button>
+            </div>
+            <div>
+                <button type="button" class="btn" id="n" onclick="">0</button>
+                <button type="button" class="btn" id="virgula" onclick="">,</button>
+                <button type="button" class="btn" id="igual" onclick="">=</button>
+            </div>
+        </div>
+        <div class="block">
+            <div>
+                <button type="button" class="btn" id="apagar" onclick="">
+                    <img src="images/delete.png" alt="Apagar">
+                </button>
+            </div>
+            <div>
+                <button type="button" class="btn" id="dividir" onclick="">/</button>
+            </div>
+            <div>
+                <button type="button" class="btn" id="multiplicar" onclick="">x</button>
+            </div>
+            <div>
+                <button type="button" class="btn" id="subtracao" onclick="">-</button>
+            </div>
+            <div>
+                <button type="button" class="btn" id="soma" onclick="">+</button>
+            </div>
         </div>
         <div>
             <a href="../index.html"><img src="../../curso-em-video/images/voltar.png" alt="Home Desafios"></a>
