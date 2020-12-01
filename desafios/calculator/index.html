@@ -16,59 +16,62 @@
     </header>
     <section>
         <div class="block">
-            <div>
+            <div id="conta">
                 conta
             </div>
-            <div>
+            <div id="pre-resultado">
                 pré-resultado
             </div>
             <div>
-                <button type="button" class="btn" id="n7" onclick="">7</button>
-                <button type="button" class="btn" id="n8" onclick="">8</button>
-                <button type="button" class="btn" id="n9" onclick="">9</button>
+                <button type="button" class="btn" id="n7" onclick="setN7()">7</button>
+                <button type="button" class="btn" id="n8" onclick="setN8()">8</button>
+                <button type="button" class="btn" id="n9" onclick="setN9()">9</button>
             </div>
             <div>
-                <button type="button" class="btn" id="n4" onclick="">4</button>
-                <button type="button" class="btn" id="n5" onclick="">5</button>
-                <button type="button" class="btn" id="n6" onclick="">6</button>
+                <button type="button" class="btn" id="n4" onclick="setN4()">4</button>
+                <button type="button" class="btn" id="n5" onclick="setN5()">5</button>
+                <button type="button" class="btn" id="n6" onclick="setN6()">6</button>
             </div>
             <div>
-                <button type="button" class="btn" id="n1" onclick="">1</button>
-                <button type="button" class="btn" id="n2" onclick="">2</button>
-                <button type="button" class="btn" id="n3" onclick="">3</button>
+                <button type="button" class="btn" id="n1" onclick="setN1()">1</button>
+                <button type="button" class="btn" id="n2" onclick="setN2()">2</button>
+                <button type="button" class="btn" id="n3" onclick="setN3()">3</button>
             </div>
             <div>
-                <button type="button" class="btn" id="n" onclick="">0</button>
-                <button type="button" class="btn" id="virgula" onclick="">,</button>
-                <button type="button" class="btn" id="igual" onclick="">=</button>
+                <button type="button" class="btn" id="n" onclick="setN()">0</button>
+                <button type="button" class="btn" id="virgula" onclick="setVirgula()">,</button>
+                <button type="button" class="btn" id="igual" onclick="resultado()">=</button>
             </div>
         </div>
         <div class="block">
             <div>
-                <button type="button" class="btn" id="apagar" onclick="">
+                <button type="button" class="btn" id="apagar" onclick="backspace()">
                     <img src="images/delete.png" alt="Apagar">
                 </button>
             </div>
             <div>
-                <button type="button" class="btn" id="dividir" onclick="">/</button>
+                <button type="button" class="btn" id="dividir" onclick="setDivisao()">/</button>
             </div>
             <div>
-                <button type="button" class="btn" id="multiplicar" onclick="">x</button>
+                <button type="button" class="btn" id="multiplicar" onclick="setMultiplicacao()">x</button>
             </div>
             <div>
-                <button type="button" class="btn" id="subtracao" onclick="">-</button>
+                <button type="button" class="btn" id="subtracao" onclick="setSubtracao()">-</button>
             </div>
             <div>
-                <button type="button" class="btn" id="soma" onclick="">+</button>
+                <button type="button" class="btn" id="soma" onclick="setSoma()">+</button>
             </div>
         </div>
         <div>
             <a href="../index.html"><img src="../../curso-em-video/images/voltar.png" alt="Home Desafios"></a>
         </div>
+        <div id="horaAtual"></div>
     </section>
     <footer>
         <p>&copy; Lucas Vinicius</p>
     </footer>
+    <script src="js/calculator.js"></script>
+    <script src="../../js/greeting.js"></script>
 </body>
 
 </html>
