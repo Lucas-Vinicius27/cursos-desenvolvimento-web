@@ -1,15 +1,11 @@
-var n = [];
-var divConta = document.getElementById('conta');
-var divPreResultado = document.getElementById('pre-resultado');
+var n = '';
+var inputConta = document.getElementById('conta');
+var divPreResultado = document.getElementById('resultado');
 
-// function setN() {
-//     if (divConta.value == '') {
-//         divConta.innerHTML = 0;
-//     } else {
-//         divConta.innerHTML += 0;
-//     }
-// }
+function setN() {
+    inputConta.setAttribute('value', '0');
+}
 
-// function backspace() {
-//     divConta.innerHTML = '';
-// }
+function backspace() {
+    inputConta.setAttribute('value', '');
+}

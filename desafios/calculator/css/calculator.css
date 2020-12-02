@@ -15,3 +15,27 @@
     outline: 0px auto;
     outline-offset: 0px;
 }
+
+input {
+    border: none;
+    background-color: white;
+    text-align: center;
+    font: normal 15pt Arial;
+    color: black;
+}
+
+::-webkit-input-placeholder {
+   color: black;
+}
+
+:-moz-placeholder {
+   color: black;
+}
+
+::-moz-placeholder {
+   color: black;
+}
+
+:-ms-input-placeholder {
+   color: black;
+}
