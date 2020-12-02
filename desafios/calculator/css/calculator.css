@@ -24,6 +24,16 @@ input {
     color: black;
 }
 
+input:hover {
+    background-color: rgb(70, 142, 236);
+}
+
+input:focus {
+    outline: thin dotted;
+    outline: 0px auto;
+    outline-offset: 0px;
+}
+
 ::-webkit-input-placeholder {
    color: black;
 }
