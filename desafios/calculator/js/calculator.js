@@ -1,11 +1,23 @@
 var n = '';
 var inputConta = document.getElementById('conta');
-var divPreResultado = document.getElementById('resultado');
+var inputResultado = document.getElementById('resultado');
 
 function setN() {
-    inputConta.setAttribute('value', '0');
+    if (n == '' || n == '0') {
+        n = '0';
+        console.log(n)
+        inputConta.setAttribute('value', n);
+    } else {
+        n += '0';
+        console.log(n)
+        inputConta.setAttribute('value', n);
+    }
 }
 
 function backspace() {
     inputConta.setAttribute('value', '');
+}
+
+function limpar() {
+    inputResultado.setAttribute('value', '');
 }

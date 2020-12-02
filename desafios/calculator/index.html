@@ -17,8 +17,12 @@
     <section>
         <p><strong>Utilize os números e símbolos</strong></p>
         <div class="block">
-            <input type="text" name="conta" id="conta" placeholder="Conta" disabled>
-            <div id="resultado">Resultado</div>
+            <div>
+                <input type="text" name="conta" id="conta" placeholder="Conta" disabled>
+            </div>
+            <div>
+                <input type="text" name="resultado" id="resultado" placeholder="Resultado" disabled>
+            </div>
             <div>
                 <button type="button" class="btn" id="n7" onclick="setN7()">7</button>
                 <button type="button" class="btn" id="n8" onclick="setN8()">8</button>
@@ -60,7 +64,7 @@
             </div>
         </div>
         <div>
-            <input type="button" value="Limpar Resultado" onclick="limpar()">
+            <input type="button" class="inp" value="Limpar Resultado" onclick="limpar()">
         </div>
         <div>
             <a href="../index.html"><img src="../../curso-em-video/images/voltar.png" alt="Home Desafios"></a>
