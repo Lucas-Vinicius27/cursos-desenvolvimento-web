@@ -1,24 +1,22 @@
-var n = '';
+var stringConta = '';
 var inputConta = document.getElementById('conta');
 var inputResultado = document.getElementById('resultado');
 
-function setN() {
-    if (n == '' || n == '0') {
-        n = '0';
-        console.log(n)
-        inputConta.setAttribute('value', n);
+function setN(num) {
+    if (stringConta == '' || stringConta == '0') {
+        stringConta = num;
+        inputConta.setAttribute('value', stringConta);
     } else {
-        n += '0';
-        console.log(n)
-        inputConta.setAttribute('value', n);
+        stringConta += num;
+        inputConta.setAttribute('value', stringConta);
     }
 }
 
 function resultado() {
-    if (n == '') {
+    if (stringConta == '') {
         alert('Não há conta para exibir o resultado!');
     } else {
-        inputResultado.setAttribute('value', eval(n));
+        inputResultado.setAttribute('value', eval(stringConta));
     }
 }
 
