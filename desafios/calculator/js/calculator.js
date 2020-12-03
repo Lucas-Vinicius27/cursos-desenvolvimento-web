@@ -2,12 +2,15 @@ var stringConta = '';
 var inputConta = document.getElementById('conta');
 var inputResultado = document.getElementById('resultado');
 
-function setN(num) {
+function setConta(str) {
     if (stringConta == '' || stringConta == '0') {
-        stringConta = num;
+        stringConta = str;
         inputConta.setAttribute('value', stringConta);
+    } else if (str == '.') {
+        stringConta += str;
+        inputConta.setAttribute('value', ',');
     } else {
-        stringConta += num;
+        stringConta += str;
         inputConta.setAttribute('value', stringConta);
     }
 }
