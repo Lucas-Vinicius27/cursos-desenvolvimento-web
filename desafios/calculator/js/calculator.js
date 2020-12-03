@@ -14,6 +14,14 @@ function setN() {
     }
 }
 
+function resultado() {
+    if (n == '') {
+        alert('Não há conta para exibir o resultado!');
+    } else {
+        inputResultado.setAttribute('value', eval(n));
+    }
+}
+
 function backspace() {
     inputConta.setAttribute('value', '');
 }
