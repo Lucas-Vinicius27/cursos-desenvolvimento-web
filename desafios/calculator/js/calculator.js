@@ -10,7 +10,7 @@ function setConta(str) {
         inputConta.setAttribute('value', stringUI);
     } else if (str == '.') {
         stringConta += str;
-        stringUI = stringConta.replace('.', ',');;
+        stringUI = stringConta.replace('.', ',');
         inputConta.setAttribute('value', stringUI);
     } else if (str == '*') {
         stringConta += str;
@@ -27,7 +27,9 @@ function resultado() {
     if (stringConta == '' || stringUI == '') {
         alert('Não há conta para exibir o resultado!');
     } else {
-        inputResultado.setAttribute('value', eval(stringConta));
+        let r = eval(stringConta);
+        let res = r.replace('.', ',');
+        inputResultado.setAttribute('value', res);
     }
 }
 
