@@ -27,9 +27,7 @@ function resultado() {
     if (stringConta == '' || stringUI == '') {
         alert('Não há conta para exibir o resultado!');
     } else {
-        let r = eval(stringConta);
-        let res = r.replace('.', ',');
-        inputResultado.setAttribute('value', res);
+        inputResultado.setAttribute('value', eval(stringConta));
     }
 }
 
