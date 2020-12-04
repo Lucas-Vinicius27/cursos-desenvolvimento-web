@@ -6,7 +6,7 @@ function contar() {
 
     if (ini == 0 || fim == 0 && inc == 0) {
         alert("ERRO! Faltam dados.")
-        resizeBy.innerHTML = 'Impossível contar!'
+        div.innerHTML = 'Impossível contar!'
     } else if (inc == 0) {
         alert("O passo 0 ou vazio não pode ser calculado, passo 1 considerado.")
         
@@ -25,7 +25,7 @@ function contar() {
 
         while (ini >= fim) {
             div.innerHTML += `${ini} \u{1F449} `
-            ini += inc
+            ini -= inc
         }
 
         div.innerHTML += `\u{1F3C1}`
