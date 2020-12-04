@@ -6,12 +6,6 @@ function setConta(str) {
     if (stringConta == '' || stringConta == '0') {
         stringConta = str;
         inputConta.setAttribute('value', stringConta);
-    } else if (str == '.') {
-        stringConta += str;
-        inputConta.setAttribute('value', stringConta);
-    } else if (str == '*') {
-        stringConta += str;
-        inputConta.setAttribute('value', stringConta);
     } else {
         stringConta += str;
         inputConta.setAttribute('value', stringConta);
