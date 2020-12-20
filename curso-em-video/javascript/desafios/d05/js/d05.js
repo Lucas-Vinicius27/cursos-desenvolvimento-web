@@ -9,9 +9,9 @@ function converter() {
     let mm = m * 1000;
 
     res.innerHTML = `<h2>A distância de ${m} metros, corresponde a...</h2>`
-        + `<p>${km} quilômetros (Km)</p>`
-        + `<p>${hm} hectômetros (Hm)</p>`
-        + `<p>${dam} decâmetros (Dam)</p>`
+        + `<p>${km.toFixed(3)} quilômetros (Km)</p>`
+        + `<p>${hm.toFixed(3)} hectômetros (Hm)</p>`
+        + `<p>${dam.toFixed(3)} decâmetros (Dam)</p>`
         + `<p>${dm} decímetros (dm)</p>`
         + `<p>${cm} centímetros (cm)</p>`
         + `<p>${mm} milímetros (mm)</p>`;
