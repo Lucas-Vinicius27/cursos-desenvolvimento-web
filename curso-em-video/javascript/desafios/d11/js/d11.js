@@ -5,9 +5,9 @@ function verificar() {
 
     if (dia == 29) {
         res.innerHTML = `<h2>Analisando o ano de ${ano}...</h2>`
-            + `<p>O ano de ${ano} <mark style="background: #7CFC00"><strong>É BISSEXTO</strong></mark> \u{2714}\u{FE0F}</p>`;
+            + `<p>O ano de ${ano} <mark style="background: #7CFC00; color: #008B00"><strong>É BISSEXTO</strong></mark> \u{2714}\u{FE0F}</p>`;
     } else {
         res.innerHTML = `<h2>Analisando o ano de ${ano}...</h2>`
-            + `<p>O ano de ${ano} <mark style="background: #FF4040"><strong>NÃO É BISSEXTO</strong></mark> \u{274C}</p>`;
+            + `<p>O ano de ${ano} <mark style="background: #FF4040; color: #8B0000"><strong>NÃO É BISSEXTO</strong></mark> \u{274C}</p>`;
     }
 }
