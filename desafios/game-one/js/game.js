@@ -15,6 +15,7 @@ if (localStorage.getItem('nome') == null) {
         localStorage.setItem('nome', nome);
     } else {
         alert(`Erro! Eu não sei o seu nome \u{1F612} \u{2639}`);
+        nome = '';
     }
 }
 
