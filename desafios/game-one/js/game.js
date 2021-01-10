@@ -1,6 +1,8 @@
 var nome = prompt('Qual o seu nome?').trim();
 var divWelcome = document.getElementById('welcome');
 var divQuestion = document.getElementById('question');
+var divModal = document.getElementById('modal');
+var divContent = document.getElementById('content');
 
 divWelcome.innerHTML = `<h2>Seja Bem-Vindo ${nome}!</h2>`
     + '<p>Aqui estão as perguntas sobre animes:</p>';
@@ -15,9 +17,15 @@ for (let i = 0; i <= 9; i++) {
 }
 
 function openModal(n) {
-    // let divModal = document.createElement('div').setAttribute('id', `card${n}`);
-    // divModal.style.display = 'block';
-    // divModal.innerHTML = `<span onclick="divModal.style.display = 'none'">&times;</span>`
-    //     + `<p>${nome} você conseguiu fazer um modal com a carta ${n}</p>`;
-    // document.innerHTML = divModal;
+    divModal.style.display = 'block';
+}
+
+function closeModal() {
+    divModal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }

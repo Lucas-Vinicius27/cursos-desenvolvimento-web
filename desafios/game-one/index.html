@@ -7,6 +7,7 @@
     <title>Jogo 1</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 
 <body>
@@ -16,6 +17,11 @@
     <section>
         <div id="welcome"></div>
         <div id="question"></div>
+        <div id="modal" class="modal">
+            <div id="content" class="modal-content">
+                <span onclick="closeModal()" class="close">&times;</span>
+            </div>
+        </div>
         <div>
             <a href="../index.html" rel="prev"><img src="../../curso-em-video/images/voltar.png" alt="Desafios"></a>
         </div>
