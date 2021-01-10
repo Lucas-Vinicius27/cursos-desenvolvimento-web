@@ -1,11 +1,35 @@
-var nome = prompt('Qual o seu nome?').trim();
+var nome = '';
+var storageNome = '';
+
+if (localStorage.getItem('nome') == null) {
+    nome = prompt('Qual é o seu nome?').trim();
+    localStorage.setItem('nome', nome);
+    storageNome = localStorage.getItem('nome'); 
+} else {
+    storageNome = localStorage.getItem('nome');
+    nome = prompt(`O seu nome é ${storageNome}?(Digite s ou n)`);
+    if (nome == 's' || nome == 'S') {
+        nome = storageNome;
+    } else if (nome == 'n' || nome == 'N') {
+        nome = prompt('Qual é o seu nome?').trim();
+        localStorage.setItem('nome', nome);
+    } else {
+        alert(`Erro! Eu não sei o seu nome \u{1F612} \u{2639}`);
+    }
+}
+
 var divWelcome = document.getElementById('welcome');
 var divQuestion = document.getElementById('question');
 var divModal = document.getElementById('modal');
 var divContent = document.getElementById('content');
 
-divWelcome.innerHTML = `<h2>Seja Bem-Vindo ${nome}!</h2>`
-    + '<p>Aqui estão as perguntas sobre animes:</p>';
+if (nome == storageNome) {
+    divWelcome.innerHTML = `<h2>Seja Bem-Vindo ${nome}!</h2>`
+        + '<p>Aqui estão as perguntas sobre animes:</p>';
+} else {
+    divWelcome.innerHTML = `<h2>Seja Bem-Vindo pessoa que não sei o nome \u{1F612} \u{2639}\u{FE0F}!</h2>`
+        + '<p>Aqui estão as perguntas sobre animes:</p>';
+}
 
 for (let i = 0; i <= 9; i++) {
     var imgDown = document.createElement('img');
