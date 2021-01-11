@@ -24,6 +24,39 @@ var divWelcome = document.getElementById('welcome');
 var divQuestion = document.getElementById('question');
 var divModal = document.getElementById('modal');
 var divContent = document.getElementById('content');
+var imgFace = document.createElement('img');
+var cards = [
+    {
+        image: "images/shingeki-no-kyojin.jpg",
+    },
+    {
+        image: "images/black-clover.jpeg",
+    },
+    {
+        image: "images/naruto.jpg",
+    },
+    {
+        image: "images/boruto.jpg",
+    },
+    {
+        image: "images/dr-stone.jpg",
+    },
+    {
+        image: "images/goblin.jpg",
+    },
+    {
+        image: "images/sesshomaru.png",
+    },
+    {
+        image: "images/yu-yu-hakusho.jpg",
+    },
+    {
+        image: "images/katekyo-hitman-reborn.jpg",
+    },
+    {
+        image: "images/hunter.png",
+    }
+];
 
 if (nome == storageNome) {
     divWelcome.innerHTML = `<h2>Seja Bem-Vindo ${nome}!</h2>`
@@ -44,6 +77,8 @@ for (let i = 0; i <= 9; i++) {
 
 function openModal(n) {
     divModal.style.display = 'block';
+    imgFace.setAttribute('src', cards[n].image)
+    divContent.appendChild(imgFace);
 }
 
 function closeModal() {
