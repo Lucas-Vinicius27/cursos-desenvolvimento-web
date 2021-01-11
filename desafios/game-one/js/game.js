@@ -13,6 +13,7 @@ if (localStorage.getItem('nome') == null) {
     } else if (nome == 'n' || nome == 'N') {
         nome = prompt('Qual é o seu nome?').trim();
         localStorage.setItem('nome', nome);
+        storageNome = localStorage.getItem('nome');
     } else {
         alert(`Erro! Eu não sei o seu nome \u{1F612} \u{2639}`);
         nome = '';
