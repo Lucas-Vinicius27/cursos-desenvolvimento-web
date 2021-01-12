@@ -76,7 +76,7 @@ for (let i = 0; i <= 9; i++) {
 }
 
 function openModal(n) {
-    imgFace.setAttribute('src', cards[n].image)
+    imgFace.setAttribute('src', cards[n].image);
     divContent.appendChild(imgFace);
     divModal.style.display = 'block';
 }
