@@ -2,18 +2,22 @@ var nome = '';
 var storageNome = '';
 
 if (localStorage.getItem('nome') == null) {
-    nome = prompt('Qual é o seu nome?').trim();
-    localStorage.setItem('nome', nome);
-    storageNome = localStorage.getItem('nome');
+    nome = prompt('Qual é o seu nome?');
+    if (nome != null) {
+        localStorage.setItem('nome', nome.trim());
+        storageNome = localStorage.getItem('nome');
+    }
 } else {
     storageNome = localStorage.getItem('nome');
     nome = prompt(`O seu nome é ${storageNome}?(Digite s ou n)`);
     if (nome == 's' || nome == 'S') {
         nome = storageNome;
     } else if (nome == 'n' || nome == 'N') {
-        nome = prompt('Qual é o seu nome?').trim();
-        localStorage.setItem('nome', nome);
-        storageNome = localStorage.getItem('nome');
+        nome = prompt('Qual é o seu nome?');
+        if (nome != null) {
+            localStorage.setItem('nome', nome.trim());
+            storageNome = localStorage.getItem('nome');
+        }
     } else {
         alert(`Erro! Eu não sei o seu nome \u{1F612} \u{2639}`);
         nome = '';
