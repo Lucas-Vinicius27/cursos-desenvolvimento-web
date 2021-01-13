@@ -38,65 +38,65 @@ var cards = [
     },
     {
         image: "images/black-clover.jpeg",
-        pergunta: "Olá",
-        alternativas: ["", "", ""],
-        resposta: new Number(),
+        pergunta: "Qual o nome do demônio que habita no grimório de 5 trevos?",
+        alternativas: ["Liebe", "Zagred", "Gimodelo"],
+        resposta: 0,
         pontuacao: 1
     },
     {
         image: "images/naruto.jpg",
-        pergunta: "Tudo bem?",
-        alternativas: ["", "", ""],
-        resposta: new Number(),
+        pergunta: "Qual o nome da minha filha?",
+        alternativas: ["Rimawari Uzumaki", "Himawari Uzumaki", "Himari Uzumaki"],
+        resposta: 1,
         pontuacao: 1
     },
     {
         image: "images/boruto.jpg",
-        pergunta: "Boruto",
-        alternativas: ["", "", ""],
-        resposta: new Number(),
+        pergunta: "Qual o nome dado ao olho direito?",
+        alternativas: ["Jogan", "Tenseigan", "Ketsuryugan"],
+        resposta: 0,
         pontuacao: 1
     },
     {
         image: "images/dr-stone.jpg",
-        pergunta: "",
-        alternativas: ["", "", ""],
-        resposta: new Number(),
+        pergunta: "Qual o nome do meu melhor amigo?",
+        alternativas: ["Chrome", "Kohaku", "Taiju Oki"],
+        resposta: 2,
         pontuacao: 1
     },
     {
         image: "images/goblin.jpg",
-        pergunta: "",
-        alternativas: ["", "", ""],
-        resposta: new Number(),
+        pergunta: "Qual o nome da amiga de infancia do Goblin Slayer?",
+        alternativas: ["Onna Shinkan", "Ushikai Musume", "Yousei Yunde"],
+        resposta: 1,
         pontuacao: 1
     },
     {
         image: "images/sesshomaru.png",
-        pergunta: "",
-        alternativas: ["", "", ""],
-        resposta: new Number(),
+        pergunta: "Qual o nome da garota que eu salvei a vida?",
+        alternativas: ["Rin", "Kagome", "Sango"],
+        resposta: 0,
         pontuacao: 1
     },
     {
         image: "images/yu-yu-hakusho.jpg",
-        pergunta: "",
-        alternativas: ["", "", ""],
-        resposta: new Number(),
+        pergunta: "Qual estilo de luta do protagonista?",
+        alternativas: ["Reiko-Hadoken", "Shin Batto", "Reigan"],
+        resposta: 0,
         pontuacao: 1
     },
     {
         image: "images/katekyo-hitman-reborn.jpg",
-        pergunta: "",
-        alternativas: ["", "", ""],
-        resposta: new Number(),
+        pergunta: "Quem treina essa equipe?",
+        alternativas: ["Lambo", "Reborn", "Giotto"],
+        resposta: 1,
         pontuacao: 1
     },
     {
         image: "images/hunter.png",
-        pergunta: "",
-        alternativas: ["", "", ""],
-        resposta: new Number(),
+        pergunta: "Qual o nome do anime da imagem?",
+        alternativas: ["Hunter", "Hunter vs Hunter", "Hunter x Hunter"],
+        resposta: 2,
         pontuacao: 1
     }
 ];
@@ -116,7 +116,7 @@ for (let i = 0; i <= 9; i++) {
     imgDown.setAttribute('onclick', `openModal(${i})`);
     divImages.appendChild(imgDown);
 }
-
+// console.log(divContent.parentNode)
 function openModal(n) {
     imgFace.setAttribute('src', cards[n].image);
     imgFace.setAttribute('alt', 'Imagem da Pergunta');
@@ -136,6 +136,8 @@ function openModal(n) {
             divContent.appendChild(inputRadio);
             divContent.appendChild(labelAlternative);
         }
+        console.log(inputRadio.parentNode)
+        console.log(labelAlternative.parentNode)
     }
     divModal.style.display = 'block';
 }
