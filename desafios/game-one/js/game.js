@@ -4,7 +4,7 @@ var storageNome = '';
 if (localStorage.getItem('nome') == null) {
     nome = prompt('Qual é o seu nome?').trim();
     localStorage.setItem('nome', nome);
-    storageNome = localStorage.getItem('nome'); 
+    storageNome = localStorage.getItem('nome');
 } else {
     storageNome = localStorage.getItem('nome');
     nome = prompt(`O seu nome é ${storageNome}?(Digite s ou n)`);
@@ -25,36 +25,77 @@ var divQuestion = document.getElementById('question');
 var divModal = document.getElementById('modal');
 var divContent = document.getElementById('content');
 var imgFace = document.createElement('img');
+var record = 0;
 var cards = [
     {
         image: "images/shingeki-no-kyojin.jpg",
+        pergunta: "",
+        alternativas: ["", "", ""],
+        resposta: new Number(),
+        pontuacao: 1
     },
     {
         image: "images/black-clover.jpeg",
+        pergunta: "",
+        alternativas: ["", "", ""],
+        resposta: new Number(),
+        pontuacao: 1
     },
     {
         image: "images/naruto.jpg",
+        pergunta: "",
+        alternativas: ["", "", ""],
+        resposta: new Number(),
+        pontuacao: 1
     },
     {
         image: "images/boruto.jpg",
+        pergunta: "",
+        alternativas: ["", "", ""],
+        resposta: new Number(),
+        pontuacao: 1
     },
     {
         image: "images/dr-stone.jpg",
+        pergunta: "",
+        alternativas: ["", "", ""],
+        resposta: new Number(),
+        pontuacao: 1
     },
     {
         image: "images/goblin.jpg",
+        pergunta: "",
+        alternativas: ["", "", ""],
+        resposta: new Number(),
+        pontuacao: 1
     },
     {
         image: "images/sesshomaru.png",
+        pergunta: "",
+        alternativas: ["", "", ""],
+        resposta: new Number(),
+        pontuacao: 1
     },
     {
         image: "images/yu-yu-hakusho.jpg",
+        pergunta: "",
+        alternativas: ["", "", ""],
+        resposta: new Number(),
+        pontuacao: 1
     },
     {
         image: "images/katekyo-hitman-reborn.jpg",
+        pergunta: "",
+        alternativas: ["", "", ""],
+        resposta: new Number(),
+        pontuacao: 1
     },
     {
         image: "images/hunter.png",
+        pergunta: "",
+        alternativas: ["", "", ""],
+        resposta: new Number(),
+        pontuacao: 1
     }
 ];
 
@@ -68,7 +109,6 @@ if (nome == storageNome) {
 
 for (let i = 0; i <= 9; i++) {
     var imgDown = document.createElement('img');
-    imgDown.setAttribute('class', 'card');
     imgDown.setAttribute('src', 'images/face-down.png');
     imgDown.setAttribute('alt', 'Fundo da Carta');
     imgDown.setAttribute('onclick', `openModal(${i})`);
@@ -77,6 +117,7 @@ for (let i = 0; i <= 9; i++) {
 
 function openModal(n) {
     imgFace.setAttribute('src', cards[n].image);
+    imgFace.setAttribute('alt', 'Imagem da Pergunta');
     divContent.appendChild(imgFace);
     divModal.style.display = 'block';
 }
