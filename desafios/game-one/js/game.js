@@ -25,33 +25,35 @@ var divImages = document.getElementById('images');
 var divModal = document.getElementById('modal');
 var divContent = document.getElementById('content');
 var imgFace = document.createElement('img');
-var input
+var pQuestion = document.getElementById('question');
+var labelAlternative = document.createElement('label');
+var inputRadioAlternative = document.createElement('input');
 var record = 0;
 var cards = [
     {
         image: "images/shingeki-no-kyojin.jpg",
-        pergunta: "",
-        alternativas: ["", "", ""],
-        resposta: new Number(),
+        pergunta: "Qual o nome da garota que me ensinou a lutar melhor?",
+        alternativas: ["Mikasa Ackerman", "Sasha Braus", "Annie Leonhart"],
+        resposta: 2,
         pontuacao: 1
     },
     {
         image: "images/black-clover.jpeg",
-        pergunta: "",
+        pergunta: "Olá",
         alternativas: ["", "", ""],
         resposta: new Number(),
         pontuacao: 1
     },
     {
         image: "images/naruto.jpg",
-        pergunta: "",
+        pergunta: "Tudo bem?",
         alternativas: ["", "", ""],
         resposta: new Number(),
         pontuacao: 1
     },
     {
         image: "images/boruto.jpg",
-        pergunta: "",
+        pergunta: "Boruto",
         alternativas: ["", "", ""],
         resposta: new Number(),
         pontuacao: 1
