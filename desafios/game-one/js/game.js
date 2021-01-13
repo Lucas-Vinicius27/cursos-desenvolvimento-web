@@ -21,10 +21,11 @@ if (localStorage.getItem('nome') == null) {
 }
 
 var divWelcome = document.getElementById('welcome');
-var divQuestion = document.getElementById('question');
+var divImages = document.getElementById('images');
 var divModal = document.getElementById('modal');
 var divContent = document.getElementById('content');
 var imgFace = document.createElement('img');
+var input
 var record = 0;
 var cards = [
     {
@@ -112,7 +113,7 @@ for (let i = 0; i <= 9; i++) {
     imgDown.setAttribute('src', 'images/face-down.png');
     imgDown.setAttribute('alt', 'Fundo da Carta');
     imgDown.setAttribute('onclick', `openModal(${i})`);
-    divQuestion.appendChild(imgDown);
+    divImages.appendChild(imgDown);
 }
 
 function openModal(n) {
