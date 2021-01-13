@@ -116,7 +116,7 @@ for (let i = 0; i <= 9; i++) {
     imgDown.setAttribute('onclick', `openModal(${i})`);
     divImages.appendChild(imgDown);
 }
-// console.log(divContent.parentNode)
+
 function openModal(n) {
     imgFace.setAttribute('src', cards[n].image);
     imgFace.setAttribute('alt', 'Imagem da Pergunta');
@@ -136,8 +136,6 @@ function openModal(n) {
             divContent.appendChild(inputRadio);
             divContent.appendChild(labelAlternative);
         }
-        console.log(inputRadio.parentNode)
-        console.log(labelAlternative.parentNode)
     }
     divModal.style.display = 'block';
 }
