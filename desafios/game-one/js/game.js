@@ -25,9 +25,8 @@ var divImages = document.getElementById('images');
 var divModal = document.getElementById('modal');
 var divContent = document.getElementById('content');
 var imgFace = document.createElement('img');
-var pQuestion = document.getElementById('question');
-var labelAlternative = document.createElement('label');
-var inputRadioAlternative = document.createElement('input');
+var pQuestion = document.createElement('p');
+var buttonAnswer = document.createElement('button');
 var record = 0;
 var cards = [
     {
@@ -121,7 +120,23 @@ for (let i = 0; i <= 9; i++) {
 function openModal(n) {
     imgFace.setAttribute('src', cards[n].image);
     imgFace.setAttribute('alt', 'Imagem da Pergunta');
+    pQuestion.innerText = cards[n].pergunta;
     divContent.appendChild(imgFace);
+    divContent.appendChild(pQuestion);
+    for (let i = 0; i <= 2; i++) {
+        if (document.getElementById(cards[n].alternativas[i]) == null) {
+            var inputRadio = document.createElement('input');
+            var labelAlternative = document.createElement('label');
+            inputRadio.setAttribute('type', 'radio');
+            inputRadio.setAttribute('id', cards[n].alternativas[i]);
+            inputRadio.setAttribute('name', 'alternativa');
+            inputRadio.setAttribute('value', i);
+            labelAlternative.setAttribute('for', cards[n].alternativas[i]);
+            labelAlternative.innerText = cards[n].alternativas[i];
+            divContent.appendChild(inputRadio);
+            divContent.appendChild(labelAlternative);
+        }
+    }
     divModal.style.display = 'block';
 }
 
