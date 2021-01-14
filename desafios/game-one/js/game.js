@@ -128,17 +128,25 @@ function openModal(n) {
     divContent.appendChild(imgFace);
     divContent.appendChild(pQuestion);
     for (let i = 0; i <= 2; i++) {
-        if (document.getElementById(cards[n].alternativas[i]) == null) {
+        var idInput = document.getElementById(cards[n].alternativas[i]);
+        var idLabel = document.getElementById(i);
+        console.log(idInput)
+        console.log(idLabel)
+        if (idInput == null) {
             var inputRadio = document.createElement('input');
             var labelAlternative = document.createElement('label');
             inputRadio.setAttribute('type', 'radio');
             inputRadio.setAttribute('id', cards[n].alternativas[i]);
             inputRadio.setAttribute('name', 'alternativa');
-            inputRadio.setAttribute('value', i);
+            // inputRadio.setAttribute('value', i);
+            labelAlternative.setAttribute('id', i);
             labelAlternative.setAttribute('for', cards[n].alternativas[i]);
             labelAlternative.innerText = cards[n].alternativas[i];
             divContent.appendChild(inputRadio);
             divContent.appendChild(labelAlternative);
+        } else if (idInput.parentNode) {
+            idInput.parentNode.removeChild(idInput);
+            idLabel.parentNode.removeChild(idLabel);
         }
     }
     divModal.style.display = 'block';
