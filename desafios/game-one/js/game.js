@@ -28,9 +28,16 @@ var divWelcome = document.getElementById('welcome');
 var divImages = document.getElementById('images');
 var divModal = document.getElementById('modal');
 var divContent = document.getElementById('content');
-var imgFace = document.createElement('img');
-var pQuestion = document.createElement('p');
-var buttonAnswer = document.createElement('button');
+var imgFace = document.getElementById('face');
+var pQuestion = document.getElementById('question');
+var input0 = document.getElementById('input0').value;
+var input1 = document.getElementById('input1');
+var input2 = document.getElementById('input2');
+var label0 = document.getElementById('label0');
+var label1 = document.getElementById('label1');
+var label2 = document.getElementById('label2');
+console.log(input0)
+console.log(input1)
 var record = 0;
 var cards = [
     {
@@ -123,10 +130,7 @@ for (let i = 0; i <= 9; i++) {
 
 function openModal(n) {
     imgFace.setAttribute('src', cards[n].image);
-    imgFace.setAttribute('alt', 'Imagem da Pergunta');
     pQuestion.innerText = cards[n].pergunta;
-    divContent.appendChild(imgFace);
-    divContent.appendChild(pQuestion);
     for (let i = 0; i <= 2; i++) {
         var idInput = document.getElementById(cards[n].alternativas[i]);
         var idLabel = document.getElementById(i);
@@ -144,9 +148,6 @@ function openModal(n) {
             labelAlternative.innerText = cards[n].alternativas[i];
             divContent.appendChild(inputRadio);
             divContent.appendChild(labelAlternative);
-        } else if (idInput.parentNode) {
-            idInput.parentNode.removeChild(idInput);
-            idLabel.parentNode.removeChild(idLabel);
         }
     }
     divModal.style.display = 'block';
