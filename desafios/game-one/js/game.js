@@ -7,6 +7,8 @@ if (localStorage.getItem('nome') == null) {
     if (nome != null) {
         localStorage.setItem('nome', nome.trim());
         storageNome = localStorage.getItem('nome');
+    } else {
+        alert(`Erro! Eu não sei o seu nome \u{1F612} \u{2639}`);
     }
 } else {
     storageNome = localStorage.getItem('nome');
@@ -160,10 +162,25 @@ function responder(n) {
 }
 
 function salvar() {
+    // let ranking = JSON.parse(localStorage.getItem('ranking'));
     if (nome == storageNome) {
-        alert(`${nome} parabéns! Sua pontuação é ${recordAtual}`);
+        alert(`${nome} parabéns! Sua pontuação é ${recordAtual}!`);
+        // let pontuacao = {
+        //     nomeJogador: nome,
+        //     record: recordAtual
+        // };
+        // ranking.unshift(pontuacao);
+        // localStorage.setItem('ranking', JSON.stringify(ranking));
+        // console.log(localStorage.getItem('ranking'))
     } else {
-        alert(`${desconhecido} parabéns! Sua pontuação é ${recordAtual}`);
+        alert(`${desconhecido} parabéns! Sua pontuação é ${recordAtual}!`);
+        // let pontuacao = {
+        //     nomeJogador: desconhecido,
+        //     record: recordAtual
+        // };
+        // ranking.unshift(pontuacao);
+        // localStorage.setItem('ranking', JSON.stringify(ranking));
+        // console.log(localStorage.getItem('ranking'))
     }
 }
 
