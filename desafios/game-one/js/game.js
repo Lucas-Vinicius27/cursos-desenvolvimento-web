@@ -20,7 +20,7 @@ if (localStorage.getItem('nome') == null) {
         }
     } else {
         alert(`Erro! Eu não sei o seu nome \u{1F612} \u{2639}`);
-        nome = '';
+        nome = null;
     }
 }
 
@@ -30,14 +30,12 @@ var divModal = document.getElementById('modal');
 var divContent = document.getElementById('content');
 var imgFace = document.getElementById('face');
 var pQuestion = document.getElementById('question');
-var input0 = document.getElementById('input0').value;
+var input0 = document.getElementById('input0'); // .checked para bool e .value
 var input1 = document.getElementById('input1');
 var input2 = document.getElementById('input2');
 var label0 = document.getElementById('label0');
 var label1 = document.getElementById('label1');
 var label2 = document.getElementById('label2');
-console.log(input0)
-console.log(input1)
 var record = 0;
 var cards = [
     {
@@ -131,26 +129,18 @@ for (let i = 0; i <= 9; i++) {
 function openModal(n) {
     imgFace.setAttribute('src', cards[n].image);
     pQuestion.innerText = cards[n].pergunta;
-    for (let i = 0; i <= 2; i++) {
-        var idInput = document.getElementById(cards[n].alternativas[i]);
-        var idLabel = document.getElementById(i);
-        if (idInput == null) {
-            var inputRadio = document.createElement('input');
-            var labelAlternative = document.createElement('label');
-            inputRadio.setAttribute('type', 'radio');
-            inputRadio.setAttribute('id', cards[n].alternativas[i]);
-            inputRadio.setAttribute('name', 'alternativa');
-            labelAlternative.setAttribute('id', i);
-            labelAlternative.setAttribute('for', cards[n].alternativas[i]);
-            labelAlternative.innerText = cards[n].alternativas[i];
-            divContent.appendChild(inputRadio);
-            divContent.appendChild(labelAlternative);
-        }
-    }
+    label0.innerText = cards[n].alternativas[0];
+    label1.innerText = cards[n].alternativas[1];
+    label2.innerText = cards[n].alternativas[2];
     divModal.style.display = 'block';
 }
 
 function closeModal() {
+    divModal.style.display = 'none';
+}
+
+function responder() {
+    alert('Você respondeu!');
     divModal.style.display = 'none';
 }
 
