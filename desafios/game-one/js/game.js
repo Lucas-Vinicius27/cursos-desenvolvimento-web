@@ -134,15 +134,12 @@ function openModal(n) {
     for (let i = 0; i <= 2; i++) {
         var idInput = document.getElementById(cards[n].alternativas[i]);
         var idLabel = document.getElementById(i);
-        console.log(idInput)
-        console.log(idLabel)
         if (idInput == null) {
             var inputRadio = document.createElement('input');
             var labelAlternative = document.createElement('label');
             inputRadio.setAttribute('type', 'radio');
             inputRadio.setAttribute('id', cards[n].alternativas[i]);
             inputRadio.setAttribute('name', 'alternativa');
-            // inputRadio.setAttribute('value', i);
             labelAlternative.setAttribute('id', i);
             labelAlternative.setAttribute('for', cards[n].alternativas[i]);
             labelAlternative.innerText = cards[n].alternativas[i];
