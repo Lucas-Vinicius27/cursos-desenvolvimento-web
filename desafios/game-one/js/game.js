@@ -62,7 +62,7 @@ var cards = [
     {
         image: "images/boruto.jpg",
         pergunta: "Qual o nome dado ao olho direito?",
-        alternativas: ["Jogan", "Tenseigan", "Ketsuryugan"],
+        alternativas: ["Jōgan", "Tenseigan", "Ketsuryugan"],
         resposta: 0,
         pontuacao: 1
     },
