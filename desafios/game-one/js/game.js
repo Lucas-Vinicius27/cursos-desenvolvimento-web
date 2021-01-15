@@ -1,5 +1,6 @@
 var nome = '';
 var storageNome = '';
+var desconhecido = 'Pessoa que não sei o nome';
 
 if (localStorage.getItem('nome') == null) {
     nome = prompt('Qual é o seu nome?');
@@ -115,7 +116,7 @@ if (nome == storageNome) {
     divWelcome.innerHTML = `<h2>Seja Bem-Vindo ${nome}!</h2>`
         + '<p>Aqui estão as perguntas sobre animes:</p>';
 } else {
-    divWelcome.innerHTML = `<h2>Seja Bem-Vindo pessoa que não sei o nome \u{1F612} \u{2639}\u{FE0F}!</h2>`
+    divWelcome.innerHTML = `<h2>Seja Bem-Vindo ${desconhecido} \u{1F612} \u{2639}\u{FE0F}!</h2>`
         + '<p>Aqui estão as perguntas sobre animes:</p>';
 }
 
@@ -156,6 +157,14 @@ function responder(n) {
         recordAtual = input2.value == cards[n].resposta ? recordAtual + 1 : recordAtual + 0;
     }
     divModal.style.display = 'none';
+}
+
+function salvar() {
+    if (nome == storageNome) {
+        alert(`${nome} parabéns! Sua pontuação é ${recordAtual}`);
+    } else {
+        alert(`${desconhecido} parabéns! Sua pontuação é ${recordAtual}`);
+    }
 }
 
 window.onclick = function(event) {
