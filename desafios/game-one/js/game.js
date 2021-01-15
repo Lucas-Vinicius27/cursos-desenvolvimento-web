@@ -134,6 +134,9 @@ function openModal(n) {
     label1.innerText = cards[n].alternativas[1];
     label2.innerText = cards[n].alternativas[2];
     buttonR.setAttribute('onclick', `responder(${n})`);
+    if (screen.width < 640 || screen.height < 480) {
+        imgFace.style.width = '75%';
+    }
     divModal.style.display = 'block';
 }
 
