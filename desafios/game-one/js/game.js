@@ -142,8 +142,17 @@ function closeModal() {
 }
 
 function responder(n) {
-    // alert('Você respondeu!');
-    input0
+    alert('Você respondeu!');
+    if (input0.checked) {
+        recordAtual = input0.value == cards[n].resposta ? recordAtual + 1 : recordAtual + 0;
+        console.log(recordAtual);
+    } else if (input1.checked) {
+        recordAtual = input1.value == cards[n].resposta ? recordAtual + 1 : recordAtual + 0;
+        console.log(recordAtual);
+    } else if (input2.checked) {
+        recordAtual = input2.value == cards[n].resposta ? recordAtual + 1 : recordAtual + 0;
+        console.log(recordAtual);
+    }
     divModal.style.display = 'none';
 }
 
