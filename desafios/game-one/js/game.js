@@ -36,7 +36,8 @@ var input2 = document.getElementById('input2');
 var label0 = document.getElementById('label0');
 var label1 = document.getElementById('label1');
 var label2 = document.getElementById('label2');
-var record = 0;
+var buttonR = document.getElementById('buttonR');
+var recordAtual = 0;
 var cards = [
     {
         image: "images/shingeki-no-kyojin.jpg",
@@ -132,6 +133,7 @@ function openModal(n) {
     label0.innerText = cards[n].alternativas[0];
     label1.innerText = cards[n].alternativas[1];
     label2.innerText = cards[n].alternativas[2];
+    buttonR.setAttribute('onclick', `responder(${n})`);
     divModal.style.display = 'block';
 }
 
@@ -139,8 +141,9 @@ function closeModal() {
     divModal.style.display = 'none';
 }
 
-function responder() {
-    alert('Você respondeu!');
+function responder(n) {
+    // alert('Você respondeu!');
+    input0
     divModal.style.display = 'none';
 }
 
