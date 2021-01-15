@@ -132,9 +132,6 @@ function openModal(n) {
     label0.innerText = cards[n].alternativas[0];
     label1.innerText = cards[n].alternativas[1];
     label2.innerText = cards[n].alternativas[2];
-    input0.setAttribute('name', `alternative${n}`);
-    input1.setAttribute('name', `alternative${n}`);
-    input2.setAttribute('name', `alternative${n}`);
     divModal.style.display = 'block';
 }
 
