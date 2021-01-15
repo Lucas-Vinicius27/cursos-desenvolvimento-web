@@ -136,6 +136,8 @@ function openModal(n) {
     buttonR.setAttribute('onclick', `responder(${n})`);
     if (screen.width < 640 || screen.height < 480) {
         imgFace.style.width = '75%';
+    } else {
+        imgFace.removeAttribute('style');
     }
     divModal.style.display = 'block';
 }
@@ -148,13 +150,10 @@ function responder(n) {
     alert('Você respondeu!');
     if (input0.checked) {
         recordAtual = input0.value == cards[n].resposta ? recordAtual + 1 : recordAtual + 0;
-        console.log(recordAtual);
     } else if (input1.checked) {
         recordAtual = input1.value == cards[n].resposta ? recordAtual + 1 : recordAtual + 0;
-        console.log(recordAtual);
     } else if (input2.checked) {
         recordAtual = input2.value == cards[n].resposta ? recordAtual + 1 : recordAtual + 0;
-        console.log(recordAtual);
     }
     divModal.style.display = 'none';
 }
