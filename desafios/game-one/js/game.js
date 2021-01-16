@@ -158,7 +158,7 @@ function responder(n) {
     } else if (input2.checked) {
         recordAtual = input2.value == cards[n].resposta ? recordAtual + 1 : recordAtual + 0;
     }
-    divModal.style.display = 'none';
+    closeModal();
 }
 
 function salvar() {
@@ -186,6 +186,6 @@ function salvar() {
 
 window.onclick = function(event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+        closeModal();
     }
 }
