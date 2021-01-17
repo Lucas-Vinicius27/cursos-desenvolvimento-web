@@ -21,3 +21,6 @@ Conjunto de cursos referente ao desenvolvimento WEB, aqui irá ficar os exercíc
 * GitHub do Gustavo Guanabara referente ao [JavaScript](https://github.com/gustavoguanabara/javascript)
 * Playlist do curso de [PHP](https://www.youtube.com/watch?v=F7KzJ7e6EAc&list=PLHz_AreHm4dm4beCCCmW4xwpmLf6EHY9k)
 * Playlist do curso de Linguagem de Programação Orientado a Objetos referente ao [PHP](https://www.youtube.com/watch?v=KlIL63MeyMY&list=PLHz_AreHm4dmGuLII3tsvryMMD7VgcT7x)
+
+### Rocketseat
+* Discover cursos [Rocketseat](https://app.rocketseat.com.br/) é necessário criar conta (grátis) para ver os cursos.
