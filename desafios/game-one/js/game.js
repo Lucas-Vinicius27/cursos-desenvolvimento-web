@@ -36,9 +36,7 @@ var pQuestion = document.getElementById('question');
 var input0 = document.getElementById('input0'); // .checked para bool e .value
 var input1 = document.getElementById('input1');
 var input2 = document.getElementById('input2');
-var label0 = document.getElementById('label0');
-var label1 = document.getElementById('label1');
-var label2 = document.getElementById('label2');
+var label = document.getElementsByTagName('label');
 var buttonR = document.getElementById('buttonR');
 var recordAtual = 0;
 var cards = [
@@ -133,9 +131,9 @@ for (let i = 0; i <= 9; i++) {
 function openModal(n) {
     imgFace.setAttribute('src', cards[n].image);
     pQuestion.innerText = cards[n].pergunta;
-    label0.innerText = cards[n].alternativas[0];
-    label1.innerText = cards[n].alternativas[1];
-    label2.innerText = cards[n].alternativas[2];
+    label[0].innerText = cards[n].alternativas[0];
+    label[1].innerText = cards[n].alternativas[1];
+    label[2].innerText = cards[n].alternativas[2];
     buttonR.setAttribute('onclick', `responder(${n})`);
     if (screen.width < 640 || screen.height < 480) {
         imgFace.style.width = '75%';

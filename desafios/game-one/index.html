@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -23,16 +24,45 @@
                 <img id="face" alt="Imagem da Pergunta">
                 <p id="question"></p>
                 <input type="radio" name="alternative" id="input0" value="0">
-                <label id="label0" for="input0"></label>
+                <label for="input0"></label>
                 <input type="radio" name="alternative" id="input1" value="1">
-                <label id="label1" for="input1"></label>
+                <label for="input1"></label>
                 <input type="radio" name="alternative" id="input2" value="2">
-                <label id="label2" for="input2"></label><br>
+                <label for="input2"></label><br>
                 <button id="buttonR" type="submit">Responder</button>
             </div>
         </div>
         <div>
             <button type="submit" onclick="salvar()">Salvar Pontuação</button>
+        </div>
+        <div id="divTable">
+            <table>
+                <caption>Tabela de Ranking</caption>
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Nome</th>
+                        <th>Pontuação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&#x1F451;</td>
+                        <td class="user"></td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="user"></td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="user"></td>
+                        <td class="score"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div>
             <a href="../index.html" rel="prev"><img src="../../curso-em-video/images/voltar.png" alt="Desafios"></a>
