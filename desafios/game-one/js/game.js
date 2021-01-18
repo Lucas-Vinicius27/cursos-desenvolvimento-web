@@ -199,6 +199,7 @@ function salvar() {
             localStorage.setItem('ranking', JSON.stringify(newRanking));
         }
     }
+    saveRanking = localStorage.getItem('ranking');
     loadRanking();
 }
 
