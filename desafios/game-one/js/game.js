@@ -211,7 +211,7 @@ function loadRanking() {
                 tableUser[0].textContent = newRanking[c].nomeJogador;
                 tableScore[0].textContent = newRanking[c].record;
                 tableDate[0].textContent = newRanking[c].date;
-            } else if (newRanking[c].record <= 6 || newRanking[c].record >= 4) {
+            } else if (newRanking[c].record <= 6 && newRanking[c].record >= 4) {
                 tableUser[1].textContent = newRanking[c].nomeJogador;
                 tableScore[1].textContent = newRanking[c].record;
                 tableDate[1].textContent = newRanking[c].date;
