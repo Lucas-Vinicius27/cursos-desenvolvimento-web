@@ -1,6 +1,9 @@
 var nome = '';
 var storageNome = '';
 var desconhecido = 'Pessoa que não sei o nome';
+var newRanking = [];
+var saveRanking = localStorage.getItem('ranking');
+console.log(saveRanking)
 
 if (localStorage.getItem('nome') == null) {
     nome = prompt('Qual é o seu nome?');
@@ -37,6 +40,9 @@ var input0 = document.getElementById('input0'); // .checked para bool e .value
 var input1 = document.getElementById('input1');
 var input2 = document.getElementById('input2');
 var label = document.getElementsByTagName('label');
+var tableUser = document.getElementsByClassName('user');
+var tableScore = document.getElementsByClassName('score');
+var tableDate = document.getElementsByClassName('data-Date');
 var buttonR = document.getElementById('buttonR');
 var recordAtual = 0;
 var cards = [
@@ -128,6 +134,8 @@ for (let i = 0; i <= 9; i++) {
     divImages.appendChild(imgDown);
 }
 
+loadRanking();
+
 function openModal(n) {
     imgFace.setAttribute('src', cards[n].image);
     pQuestion.innerText = cards[n].pergunta;
@@ -160,25 +168,58 @@ function responder(n) {
 }
 
 function salvar() {
-    // let ranking = JSON.parse(localStorage.getItem('ranking'));
     if (nome == storageNome) {
         alert(`${nome} parabéns! Sua pontuação é ${recordAtual}!`);
-        // let pontuacao = {
-        //     nomeJogador: nome,
-        //     record: recordAtual
-        // };
-        // ranking.unshift(pontuacao);
-        // localStorage.setItem('ranking', JSON.stringify(ranking));
-        // console.log(localStorage.getItem('ranking'))
+        let pontuacao = {
+            nomeJogador: nome,
+            record: recordAtual,
+            date: new Date().toDateString()
+        };
+        if (saveRanking == null) {
+            newRanking.push(pontuacao);
+            localStorage.setItem('ranking', JSON.stringify(newRanking));
+        } else {
+            newRanking = JSON.parse(saveRanking);
+            newRanking.push(pontuacao);
+            localStorage.setItem('ranking', JSON.stringify(newRanking));
+        }
     } else {
         alert(`${desconhecido} parabéns! Sua pontuação é ${recordAtual}!`);
-        // let pontuacao = {
-        //     nomeJogador: desconhecido,
-        //     record: recordAtual
-        // };
-        // ranking.unshift(pontuacao);
-        // localStorage.setItem('ranking', JSON.stringify(ranking));
-        // console.log(localStorage.getItem('ranking'))
+        let pontuacao = {
+            nomeJogador: desconhecido,
+            record: recordAtual,
+            date: new Date().toDateString()
+        };
+        if (saveRanking == null) {
+            newRanking.push(pontuacao);
+            localStorage.setItem('ranking', JSON.stringify(newRanking));
+        } else {
+            newRanking = JSON.parse(saveRanking);
+            newRanking.push(pontuacao);
+            localStorage.setItem('ranking', JSON.stringify(newRanking));
+        }
+    }
+    loadRanking();
+}
+
+function loadRanking() {
+    if (saveRanking != null) {
+        newRanking = JSON.parse(saveRanking);
+        for (let c in newRanking) {
+            if (newRanking[c].record >= 7) {
+                tableUser[0].textContent = newRanking[c].nomeJogador;
+                tableScore[0].textContent = newRanking[c].record;
+                tableDate[0].textContent = newRanking[c].date;
+            } else if (newRanking[c].record <= 6 || newRanking[c].record >= 4) {
+                tableUser[1].textContent = newRanking[c].nomeJogador;
+                tableScore[1].textContent = newRanking[c].record;
+                tableDate[1].textContent = newRanking[c].date;
+            } else {
+                tableUser[2].textContent = newRanking[c].nomeJogador;
+                tableScore[2].textContent = newRanking[c].record;
+                tableDate[2].textContent = newRanking[c].date;
+            }
+        }
     }
 }
 
