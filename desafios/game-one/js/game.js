@@ -3,7 +3,6 @@ var storageNome = '';
 var desconhecido = 'Pessoa que não sei o nome';
 var newRanking = [];
 var saveRanking = localStorage.getItem('ranking');
-console.log(saveRanking)
 
 if (localStorage.getItem('nome') == null) {
     nome = prompt('Qual é o seu nome?');
