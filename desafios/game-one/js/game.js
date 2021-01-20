@@ -50,70 +50,80 @@ var cards = [
         pergunta: "Qual o nome da garota que me ensinou a lutar melhor?",
         alternativas: ["Mikasa Ackerman", "Sasha Braus", "Annie Leonhart"],
         resposta: 2,
-        pontuacao: 1
+        pontuacao: 1,
+        respondida: false
     },
     {
         image: "images/black-clover.jpeg",
         pergunta: "Qual o nome do demônio que habita no grimório de 5 trevos?",
         alternativas: ["Liebe", "Zagred", "Gimodelo"],
         resposta: 0,
-        pontuacao: 1
+        pontuacao: 1,
+        respondida: false
     },
     {
         image: "images/naruto.jpg",
         pergunta: "Qual o nome da minha filha?",
         alternativas: ["Rimawari Uzumaki", "Himawari Uzumaki", "Himari Uzumaki"],
         resposta: 1,
-        pontuacao: 1
+        pontuacao: 1,
+        respondida: false
     },
     {
         image: "images/boruto.jpg",
         pergunta: "Qual o nome dado ao olho direito?",
         alternativas: ["Jōgan", "Tenseigan", "Ketsuryugan"],
         resposta: 0,
-        pontuacao: 1
+        pontuacao: 1,
+        respondida: false
     },
     {
         image: "images/dr-stone.jpg",
         pergunta: "Qual o nome do meu melhor amigo?",
         alternativas: ["Chrome", "Kohaku", "Taiju Oki"],
         resposta: 2,
-        pontuacao: 1
+        pontuacao: 1,
+        respondida: false
     },
     {
         image: "images/goblin.jpg",
         pergunta: "Qual o nome da amiga de infancia do Goblin Slayer?",
         alternativas: ["Onna Shinkan", "Ushikai Musume", "Yousei Yunde"],
         resposta: 1,
-        pontuacao: 1
+        pontuacao: 1,
+        respondida: false
     },
     {
         image: "images/sesshomaru.png",
         pergunta: "Qual o nome da garota que eu salvei a vida?",
         alternativas: ["Rin", "Kagome", "Sango"],
         resposta: 0,
-        pontuacao: 1
+        pontuacao: 1,
+        respondida: false
     },
     {
         image: "images/yu-yu-hakusho.jpg",
         pergunta: "Qual estilo de luta do protagonista?",
         alternativas: ["Reiko-Hadoken", "Shin Batto", "Reigan"],
         resposta: 0,
-        pontuacao: 1
+        pontuacao: 1,
+        respondida: false
     },
     {
         image: "images/katekyo-hitman-reborn.jpg",
         pergunta: "Quem treina essa equipe?",
         alternativas: ["Lambo", "Reborn", "Giotto"],
         resposta: 1,
-        pontuacao: 1
+        pontuacao: 1,
+        respondida: false
     },
     {
         image: "images/hunter.png",
         pergunta: "Qual o nome do anime da imagem?",
         alternativas: ["Hunter", "Hunter vs Hunter", "Hunter x Hunter"],
         resposta: 2,
-        pontuacao: 1
+        pontuacao: 1,
+        respondida: false
     }
 ];
 
@@ -155,13 +165,18 @@ function closeModal() {
 }
 
 function responder(n) {
-    alert('Você respondeu!');
-    if (input0.checked) {
-        recordAtual = input0.value == cards[n].resposta ? recordAtual + 1 : recordAtual + 0;
-    } else if (input1.checked) {
-        recordAtual = input1.value == cards[n].resposta ? recordAtual + 1 : recordAtual + 0;
-    } else if (input2.checked) {
-        recordAtual = input2.value == cards[n].resposta ? recordAtual + 1 : recordAtual + 0;
+    if (cards[n].respondida === false) {
+        alert('Você respondeu!');
+        if (input0.checked) {
+            recordAtual = input0.value == cards[n].resposta ? recordAtual + 1 : recordAtual + 0;
+        } else if (input1.checked) {
+            recordAtual = input1.value == cards[n].resposta ? recordAtual + 1 : recordAtual + 0;
+        } else if (input2.checked) {
+            recordAtual = input2.value == cards[n].resposta ? recordAtual + 1 : recordAtual + 0;
+        }
+        cards[n].respondida = true;
+    } else {
+        alert('Você já respondeu essa pergunta!');
     }
     closeModal();
 }
