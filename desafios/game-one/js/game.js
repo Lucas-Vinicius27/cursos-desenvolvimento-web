@@ -1,8 +1,8 @@
-var nome = '';
-var storageNome = '';
-var desconhecido = 'Pessoa que não sei o nome';
-var newRanking = [];
-var saveRanking = localStorage.getItem('ranking');
+let nome = '';
+let storageNome = '';
+let desconhecido = 'Pessoa que não sei o nome';
+let newRanking = [];
+let saveRanking = localStorage.getItem('ranking');
 
 if (localStorage.getItem('nome') == null) {
     nome = prompt('Qual é o seu nome?');
@@ -29,22 +29,22 @@ if (localStorage.getItem('nome') == null) {
     }
 }
 
-var divWelcome = document.getElementById('welcome');
-var divImages = document.getElementById('images');
-var divModal = document.getElementById('modal');
-var divContent = document.getElementById('content');
-var imgFace = document.getElementById('face');
-var pQuestion = document.getElementById('question');
-var input0 = document.getElementById('input0'); // .checked para bool e .value
-var input1 = document.getElementById('input1');
-var input2 = document.getElementById('input2');
-var label = document.getElementsByTagName('label');
-var tableUser = document.getElementsByClassName('user');
-var tableScore = document.getElementsByClassName('score');
-var tableDate = document.getElementsByClassName('data-Date');
-var buttonR = document.getElementById('buttonR');
-var recordAtual = 0;
-var cards = [
+let divWelcome = document.getElementById('welcome');
+let divImages = document.getElementById('images');
+let divModal = document.getElementById('modal');
+let divContent = document.getElementById('content');
+let imgFace = document.getElementById('face');
+let pQuestion = document.getElementById('question');
+let input0 = document.getElementById('input0'); // .checked para bool e .value
+let input1 = document.getElementById('input1');
+let input2 = document.getElementById('input2');
+let label = document.getElementsByTagName('label');
+let tableUser = document.getElementsByClassName('user');
+let tableScore = document.getElementsByClassName('score');
+let tableDate = document.getElementsByClassName('data-Date');
+let buttonR = document.getElementById('buttonR');
+let recordAtual = 0;
+let cards = [
     {
         image: "images/shingeki-no-kyojin.jpg",
         pergunta: "Qual o nome da garota que me ensinou a lutar melhor?",
@@ -136,7 +136,7 @@ if (nome == storageNome) {
 }
 
 for (let i = 0; i <= 9; i++) {
-    var imgDown = document.createElement('img');
+    let imgDown = document.createElement('img');
     imgDown.setAttribute('src', 'images/face-down.png');
     imgDown.setAttribute('alt', 'Fundo da Carta');
     imgDown.setAttribute('onclick', `openModal(${i})`);
