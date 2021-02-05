@@ -1,8 +1,8 @@
-var hr = document.getElementById('horaAtual');
-var msg = document.querySelector('div#msg');
+const hr = document.getElementById('horaAtual');
+const msg = document.querySelector('div#msg');
 
 if (msg != null) {
-    var hora = new Date().getHours();
+    const hora = new Date().getHours();
     if (hora >= 0 && hora < 12) {
         msg.innerHTML = `<p><strong>Bom dia!</strong></p>`;
     } else if (hora >= 12 && hora <= 18) {
