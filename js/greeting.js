@@ -13,6 +13,6 @@ if (msg != null) {
 }
 
 setInterval(() => {
-    var date = new Date();
+    const date = new Date();
     hr.innerHTML = '<p><strong>' + date.toLocaleTimeString() + '</strong></p>';
 }, 1000);
