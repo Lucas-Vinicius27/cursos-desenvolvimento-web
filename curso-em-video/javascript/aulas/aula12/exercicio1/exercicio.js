@@ -38,6 +38,7 @@ function verificar() {
                 img.setAttribute('src', 'images/idosa.jpg')
             }
         }
+        img.setAttribute('alt', 'Imagem que refere-se a sua idade.');
         res.innerHTML = `<p>Detectamos uma pessoa de sexo ${genero} com ${idade} anos.</p>`
         res.appendChild(img)
     }
